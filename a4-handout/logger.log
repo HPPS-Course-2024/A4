@@ -65,3 +65,16 @@
 [2024-12-17 03:50:36] [coord_query_naive.c:33 in mk_naive] INFO: Naive index created successfully
 [2024-12-17 03:50:40] [coord_query_naive.c:34 in mk_naive] INFO: Naive index created successfully
 [2024-12-17 03:56:33] [coord_query_naive.c:34 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 05:31:07] [coord_query_naive.c:34 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 05:33:49] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 05:33:49] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 05:35:16] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 05:35:16] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 05:35:18] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 05:35:18] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 05:35:36] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 05:35:36] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 05:36:10] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 05:36:10] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 05:36:26] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 05:36:26] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully

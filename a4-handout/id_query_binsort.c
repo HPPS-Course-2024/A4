@@ -77,15 +77,28 @@ void free_indexed(indexed_data_t* data) {
 }
 
 id_record_pair_t* binary_search(id_record_pair_t* pairs, int n,
-                                int64_t needle) {}
+                                int64_t needle) {
+  int l = 0, r = n - 1;
+  while (l <= r) {
+    int m = l + (r - l) / 2;
+    if (pairs[m].osm_id < needle)
+      l = m + 1;
+    else if (pairs[m].osm_id > needle)
+      r = m - 1;
+    else
+      return pairs + m;
+  }
+  return NULL;
+}
 
 const struct record* lookup_indexed(indexed_data_t* data, int64_t needle) {
-  void* a = bsearch(&needle, data->id_record_pairs, data->n,
-                    sizeof(id_record_pair_t), &cmp_record_pairs);
-  if (!a) {
+  id_record_pair_t* id_record_pair =
+      binary_search(data->id_record_pairs, data->n, needle);
+
+  if (!id_record_pair) {
     return NULL;
   }
-  return ((id_record_pair_t*)a)->record;
+  return id_record_pair->record;
 }
 
 int main(int argc, char** argv) {
