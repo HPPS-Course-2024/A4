@@ -9,14 +9,19 @@
 #include "id_query.h"
 #include "log.h"
 #include "record.h"
-
+// This struct is allocated memory on the heap for an array of records and an
+// integer. When allocating memory for a struct naive_data instance using
+// malloc, it allocates sizeof(struct record*) + sizeof(int) bytes on the
+// heap. On a 32-bit system, this would be 4 (pointer) + 4 (int) = 8 bytes. On
+// a 64-bit system, this would be 8 (pointer) + 4 (int) = 12 bytes.
 struct naive_data {
-  struct record* r<s;
+  struct record* rs;
   int            n;
 };
 
 struct naive_data* mk_naive(struct record* rs, int n) {
   LOG_INFO("Creating naive index with %d records", n);
+
   struct naive_data* data = malloc(sizeof(struct naive_data));
   if (!data) {
     LOG_ERROR("Failed to allocate memory for naive_data: %s", strerror(errno));
