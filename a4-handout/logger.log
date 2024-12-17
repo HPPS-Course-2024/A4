@@ -1,0 +1,67 @@
+[2024-12-16 22:33:31] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records[2024-12-16 22:59:48] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-16 22:59:48] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-16 23:10:05] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-16 23:10:05] [id_query_naive.c:27 in mk_naive] ERROR: Naive index created successfully
+[2024-12-16 23:10:43] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-16 23:10:43] [id_query_naive.c:27 in mk_naive] ERROR: Naive index created successfully
+[2024-12-16 23:19:09] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-16 23:19:09] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-16 23:20:03] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-16 23:20:21] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-16 23:20:26] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-16 23:38:21] [tests.c:87 in main] ERROR: Test failed for test_id_query_naive
+[2024-12-16 23:38:41] [tests.c:87 in main] ERROR: Test failed for test_id_query_naive
+[2024-12-17 00:26:57] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-17 00:26:57] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 00:27:03] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 00:27:20] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-17 00:41:14] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-17 00:41:14] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 00:41:18] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-17 01:23:18] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-17 01:23:18] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 01:23:27] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:29] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:31] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-17 01:23:31] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 01:23:32] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:32] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:32] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:32] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:32] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:33] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:33] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:33] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:33] [id_query_naive.c:47 in lookup_naive] INFO: Record not found in naive index
+[2024-12-17 01:23:35] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 9 records
+[2024-12-17 01:23:35] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 01:39:11] [id_query_indexed.c:25 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 01:39:11] [id_query_indexed.c:35 in mk_indexed] ERROR: Failed to allocate memory for id_record_pairs: No such file or directory
+[2024-12-17 01:39:24] [id_query_indexed.c:25 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 01:39:24] [id_query_indexed.c:35 in mk_indexed] ERROR: Failed to allocate memory for id_record_pairs: No such file or directory
+[2024-12-17 01:39:26] [id_query_indexed.c:25 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 01:39:26] [id_query_indexed.c:35 in mk_indexed] ERROR: Failed to allocate memory for id_record_pairs: No such file or directory
+[2024-12-17 01:42:20] [id_query_indexed.c:25 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 01:42:20] [id_query_indexed.c:48 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 01:43:18] [id_query_indexed.c:25 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 01:43:18] [id_query_indexed.c:48 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 01:46:33] [id_query_indexed.c:25 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 01:46:33] [id_query_indexed.c:47 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 03:24:04] [id_query_binsort.c:37 in mk_indexed] INFO: Creating indexed index with 9 records
+[2024-12-17 03:24:04] [id_query_binsort.c:61 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 03:24:59] [id_query_binsort.c:37 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 03:24:59] [id_query_binsort.c:61 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 03:25:19] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 19999 records
+[2024-12-17 03:25:19] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 03:25:24] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-17 03:25:29] [id_query_naive.c:43 in lookup_naive] INFO: Record found in naive index
+[2024-12-17 03:29:27] [id_query_naive.c:19 in mk_naive] INFO: Creating naive index with 19999 records
+[2024-12-17 03:29:27] [id_query_naive.c:27 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 03:29:51] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 03:29:51] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 03:30:21] [id_query_binsort.c:41 in mk_indexed] INFO: Creating indexed index with 19999 records
+[2024-12-17 03:30:21] [id_query_binsort.c:65 in mk_indexed] INFO: Indexed index created successfully
+[2024-12-17 03:50:02] [coord_query_naive.c:33 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 03:50:36] [coord_query_naive.c:33 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 03:50:40] [coord_query_naive.c:34 in mk_naive] INFO: Naive index created successfully
+[2024-12-17 03:56:33] [coord_query_naive.c:34 in mk_naive] INFO: Naive index created successfully
