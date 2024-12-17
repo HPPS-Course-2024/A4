@@ -11,7 +11,7 @@
 #include "record.h"
 
 struct naive_data {
-  struct record* rs;
+  struct record* r<s;
   int            n;
 };
 
