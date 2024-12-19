@@ -37,7 +37,7 @@ int cmp_record_pairs(const void* a, const void* b) {
 //   return (*(id_record_pair_t*)a).osm_id - (*(id_record_pair_t*)b).osm_id;
 // }
 
-indexed_data_t* mk_indexed(const struct record* rs, int n) {
+indexed_data_t* mk_binsort(const struct record* rs, int n) {
   LOG_INFO("Creating indexed index with %d records", n);
   indexed_data_t* data = malloc(sizeof(indexed_data_t));
   if (!data) {
@@ -66,7 +66,7 @@ indexed_data_t* mk_indexed(const struct record* rs, int n) {
   return data;
 }
 
-void free_indexed(indexed_data_t* data) {
+void free_binsort(indexed_data_t* data) {
   if (!data) {
     LOG_ERROR("Attempted to free NULL indexed_data");
     return;
@@ -91,10 +91,9 @@ id_record_pair_t* binary_search(id_record_pair_t* pairs, int n,
   return NULL;
 }
 
-const struct record* lookup_indexed(indexed_data_t* data, int64_t needle) {
+const struct record* lookup_binsort(indexed_data_t* data, int64_t needle) {
   id_record_pair_t* id_record_pair =
       binary_search(data->id_record_pairs, data->n, needle);
-
   if (!id_record_pair) {
     return NULL;
   }
@@ -102,6 +101,6 @@ const struct record* lookup_indexed(indexed_data_t* data, int64_t needle) {
 }
 
 int main(int argc, char** argv) {
-  return id_query_loop(argc, argv, (mk_index_fn)mk_indexed,
-                       (free_index_fn)free_indexed, (lookup_fn)lookup_indexed);
+  return id_query_loop(argc, argv, (mk_index_fn)mk_binsort,
+                       (free_index_fn)free_binsort, (lookup_fn)lookup_binsort);
 }

@@ -43,24 +43,25 @@ void free_naive(struct naive_data* data) {
   free(data);
 }
 
-const struct record* lookup_naive(struct naive_data* data, double lon,
-                                  double lat) {
+const struct record* lookup_naive(struct naive_data* data, double lon_query,
+                                  double lat_query) {
   if (!data) {
     LOG_ERROR("Attempted to look up in NULL naive_data");
     return NULL;
   }
 
-  if (data->n == 0) {
+  if (data->n < 1) {
     LOG_ERROR("Attempted to look up in empty naive_data");
     return NULL;
   }
 
   struct record* best      = data->rs;
-  double         best_dist = dist(best->lon, lon, best->lat, lat);
+  double         best_dist = dist(best->lon, lon_query, best->lat, lat_query);
 
-  // // Start at i=1 because best is already set to 0
   for (int i = 1; i < data->n; i++) {
-    double dist_candidate = dist(data->rs[i].lon, lon, data->rs[i].lat, lat);
+    double dist_candidate =
+        dist(data->rs[i].lon, lon_query, data->rs[i].lat, lat_query);
+
     if (dist_candidate < best_dist) {
       best      = data->rs + i;
       best_dist = dist_candidate;

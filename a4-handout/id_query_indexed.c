@@ -35,10 +35,12 @@ indexed_data_t* mk_indexed(const struct record* rs, int n) {
   if (!data->id_record_pairs) {
     LOG_ERROR("Failed to allocate memory for id_record_pairs: %s",
               strerror(errno));
+
     free(data);
     return NULL;
   }
 
+  // Expensive on startup only but fast interms of lookup interactivity
   for (int i = 0; i < n; i++) {
     data->id_record_pairs[i].osm_id = rs[i].osm_id;
     data->id_record_pairs[i].record = rs + i;
@@ -48,7 +50,7 @@ indexed_data_t* mk_indexed(const struct record* rs, int n) {
   return data;
 }
 
-void free_indexed(indexed_data_t* data) {
+void free_binsort(indexed_data_t* data) {
   if (!data) {
     LOG_ERROR("Attempted to free NULL indexed_data");
     return;
@@ -58,7 +60,7 @@ void free_indexed(indexed_data_t* data) {
   LOG_INFO("Indexed index freed successfully");
 }
 
-const struct record* lookup_indexed(indexed_data_t* data, int64_t needle) {
+const struct record* lookup_binsort(indexed_data_t* data, int64_t needle) {
   for (int i = 0; i < data->n; i++) {
     if (data->id_record_pairs[i].osm_id == needle) {
       return data->id_record_pairs->record + i;
@@ -69,5 +71,5 @@ const struct record* lookup_indexed(indexed_data_t* data, int64_t needle) {
 
 int main(int argc, char** argv) {
   return id_query_loop(argc, argv, (mk_index_fn)mk_indexed,
-                       (free_index_fn)free_indexed, (lookup_fn)lookup_indexed);
+                       (free_index_fn)free_binsort, (lookup_fn)lookup_binsort);
 }
